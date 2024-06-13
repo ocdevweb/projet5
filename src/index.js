@@ -3,12 +3,12 @@ import { createRoot } from "react-dom/client";
 import {
   createBrowserRouter,
   RouterProvider,
-  Outlet
 } from 'react-router-dom';
-/* import "/css/styles.css"; */
 
 import App, { loader as rootLoader } from "./App";
 import Root from "./routes/root";
+import Room, { loader as roomLoader } from "./routes/room";
+import About from "./routes/about";
 
 const router = createBrowserRouter([
   {
@@ -22,11 +22,12 @@ const router = createBrowserRouter([
       },
       {
         path: "rooms/:roomId",
-        element: <div>Hello world! Rooms</div>,
+        element: <Room  />,
+        loader: roomLoader
       },
       {
         path: "about",
-        element: <div>Hello world! about</div>,
+        element: <About />,
       },
       {
         path: '*',

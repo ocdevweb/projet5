@@ -16,7 +16,7 @@ export default function Root() {
                 {rooms.length ? (
                 <>
                     {rooms.map((room) => (
-                        <Link key={room.id} className='cardLink' to={`/room/${room.id}`}>
+                        <Link key={room.id} className='cardLink' to={`/rooms/${room.id}`} onClick={() => window.scroll(0, 0)}>
                             <Card img={room.cover} title={room.title} />
                         </Link>
                     ))}
