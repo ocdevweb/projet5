@@ -1,0 +1,60 @@
+header a:hover {
+  text-decoration: underline;
+}
+
+header {
+  color: #FF6060;
+  max-width: 1440px;
+  margin: 27px 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header img {
+  width: 210px;
+  height: 68px;
+}
+
+header ul {
+  display: flex;
+  padding: 0;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+
+header li {
+  list-style: none;
+}
+
+header a {
+  color: black;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+header a[class="active"] {
+  text-decoration: underline;
+}
+
+@media (max-width:768px) {
+  header ul {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  header img {
+    width: 145px;
+    height: 47px;
+  }
+
+  header a {
+    text-transform: uppercase;
+  }
+
+  header {
+    margin: 17px 0;
+  }
+}
