@@ -6,7 +6,7 @@ export default function Error() {
     <>
       <div className='error'>
         <div className='message'><h1>404</h1>
-          <h2>Oups! La page que vous demandez n'existe pas.</h2>
+          <p>Oups! La page que vous demandez n'existe pas.</p>
         </div>
         <div>
           <Link to="/"><span>Retourner sur la page d'accueil</span></Link>
