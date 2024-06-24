@@ -1,4 +1,3 @@
-
 h1,
 h2,
 h3,
@@ -27,29 +26,29 @@ main {
   width: 100%;
   max-width: 1240px;
   padding: 0 60px;
-  margin:auto;
+  margin: auto;
   box-sizing: border-box;
 
 }
 
 .main {
-  min-height: 150vh;
+   min-height: 75vh; 
   width: 100%;
+}
+
+header a:hover {
+  text-decoration: underline;
 }
 
 
 header {
   color: #FF6060;
   max-width: 1440px;
-}
-
-header {
+  margin: 27px 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 40px;
-  gap: 50px;
 }
 
 header img {
@@ -63,7 +62,6 @@ header ul {
   justify-content: space-between;
   align-items: center;
   gap: 50px;
-
 }
 
 header li {
@@ -121,25 +119,14 @@ footer p {
   margin: 0;
 }
 
-.cardLink {
-  width: 30%;
-}
-
 .card {
-  cursor:pointer;
+  cursor: pointer;
   position: relative;
   aspect-ratio: 1 / 1;
   width: 100%;
   overflow: hidden;
   border-radius: 10px;
-  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
-  box-shadow: 0 10px 20px black; */
 }
-
-/* .card:hover {
-  transform: scale(1.05);
-} */
 
 .card img {
   width: 100%;
@@ -157,33 +144,27 @@ footer p {
   color: #fff;
   display: flex;
   z-index: 2;
-  /* flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  transition: bottom 0.3s; */
 }
 
-/* .card:hover .overlay {
-  bottom: 0;
-} */
 
 .cards {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 27px 27px;
   padding: 27px;
   background: #F6F6F6;
   border-radius: 25px;
-  margin-top: 43px;
-  justify-content:baseline
+  margin: 27px 0;
+  justify-content: left;
+
 }
 
 .active {
   color: #FF6060;
-} 
+}
 
 .inactive {
-  color:#E3E3E3;
+  color: #E3E3E3;
 }
 
 
@@ -194,7 +175,9 @@ footer p {
   overflow: hidden;
   border-radius: 25px;
 }
-.carousel .next, .prev {
+
+.carousel .next,
+.prev {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -208,8 +191,8 @@ footer p {
 }
 
 .carousel-img {
-  width:100%;
-  height:100%;
+  width: 100%;
+  height: 100%;
   object-position: center;
   object-fit: cover;
 }
@@ -228,23 +211,24 @@ footer p {
 
 .collapse-container {
   z-index: 0;
+  overflow-y: hidden;
 }
 
 .collapse-container .collapse-header {
+  margin-top: 0;
   width: 100%;
   padding: 0px 7px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-weight: 500;
-  font-size: 20px;
+  font-weight: 700;
+  font-size: 13px;
   background: #FF6060;
   color: white;
   border: none;
   cursor: pointer;
   border-radius: 10px;
   z-index: 0;
-  
 }
 
 .collapse-container .arrow {
@@ -257,19 +241,21 @@ footer p {
 }
 
 .collapse-container .collapse-contents {
-  
+
   width: 100%;
-  transition:  all 0.25s linear(0,1);
+  transition: all 0.25s linear(0, 1);
   position: relative;
-  background:#F6F6F673 45%;
+  background: #F6F6F673 45%;
   transform: translateY(-100%);
-  
+
   font-size: 20px;
   font-style: italic;
   border-radius: 10px;
   z-index: -1;
   overflow-y: hidden;
   height: 0;
+  font-weight: 400;
+  font-size: 12px;
 }
 
 .collapse-contents.expanded {
@@ -277,46 +263,80 @@ footer p {
   height: max-content;
 }
 
+.contentsp {
+  padding: 0 2em;
+}
+
+.host-picture {
+  clip-path: circle();
+}
+
+.host-info-first {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.host-name {
+  text-align: right;
+  white-space: pre;
+}
+
+.equipment-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+
 @keyframes slideDown {
   from {
-      transform: translateY(-100%) ;
-      height: 0;
+    transform: translateY(-100%);
+    height: 0;
   }
 
   to {
-      transform: translateY(0) ;
-      height: max-content;
+    transform: translateY(0);
+    height: max-content;
   }
 }
 
 @keyframes slideUp {
   from {
-      transform: translateY(0) ;
-      height: max-content;
+    transform: translateY(0);
+    height: max-content;
   }
 
   to {
-      transform: translateY(-100%) ;
-      height: 0;
+    transform: translateY(-100%);
+    height: 0;
   }
+}
+
+.room-info {
+  margin-bottom: 27px;
 }
 
 .room-info-first {
   display: flex;
   justify-content: space-between;
+  padding: 1em 0 2em 0;
+  gap: 1em;
 }
 
 .host-info {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: end;
+  color: #FF6060;
 }
 
 .pills-container {
   display: flex;
+  flex-direction: row;
   gap: 10px;
 }
+
 .pill {
   background-color: #FF6060;
   color: white;
@@ -324,6 +344,98 @@ footer p {
   font-weight: 700;
   border-radius: 10px;
   padding: 4px 20px;
+  white-space: nowrap;
+}
+
+.room-title {
+  color: #FF6060;
+  width: 100%;
+}
+
+.host-info-second {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.banner {
+  width: 100%;
+  height: 223px;
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+  background: #000000;
+  background-blend-mode: darken;
+  filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.30));
+  z-index: -1;
+  border-radius: 25px;
+}
+
+.about-page .banner img {
+  opacity: 0.8;
+}
+
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+  position: relative;
+  background: #000000;
+  opacity: 0.6;
+  background-blend-mode: darken;
+  opacity: 0.6;
+
+}
+
+.overlay-banner {
+  width: fit-content;
+  text-wrap: nowrap;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 700;
+  font-size: 1.8em;
+  margin: 0;
+  color: white;
+  display: flex;
+  z-index: 2;
+}
+
+.about {
+  margin: 27px 0;
+  display: flex;
+  gap: 27px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about .collapse-container {
+  width: 80%;
+}
+
+.error {
+  text-align: center;
+  color: #FF6060;
+}
+
+.error h1 {
+  font-size: 288px;
+  font-weight: 700;
+}
+
+.error h2 {
+  font-size: 36px;
+  font-weight: 500;
+  margin-bottom: 200px;
+  margin-top: 200px;
+}
+
+.error .message {
+  overflow: auto;
 }
 
 @media (max-width: 768px) {
@@ -331,8 +443,26 @@ footer p {
     padding: 60px 0;
   }
 
-  .cardLink {
-    width: 100%;
+  .banner {
+    height: 111px;
+  }
+
+  .overlay-banner {
+    text-wrap: wrap;
+    left: 15px;
+    top: 32px;
+    transform: none;
+    max-width: 50%;
+  }
+
+  .cards {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .card {
+    aspect-ratio: 355 / 255;
   }
 
   .room-info-first {
@@ -341,5 +471,38 @@ footer p {
 
   .host-info {
     flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
   }
+
+  .main-container {
+    padding: 0 20px;
+  }
+
+  .about .collapse-container {
+    width: 100%;
+  }
+
+  header {
+    margin: 17px 0;
+  }
+
+
+  .description {
+    flex-direction: column;
+    gap: 27px;
+  }
+
+  .description .collapse-container {
+    width: 100%;
+  }
+
+  .error h1 {
+    font-size: 96px;
+  }
+  
+  .error h2 {
+    font-size: 18px;
+  }
+
 }

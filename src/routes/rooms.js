@@ -8,13 +8,12 @@ export async function getRooms() {
     })
 
     try {
-        console.log(response);
         if (!response.ok) {
             throw new Error(response.statusText);
         }
         response = response.json();
     }
-    catch (error) { console.log(error); };
+    catch (error) { };
 
     return response;
 }

@@ -9,6 +9,7 @@ import App, { loader as rootLoader } from "./App";
 import Root from "./routes/root";
 import Room, { loader as roomLoader } from "./routes/room";
 import About from "./routes/about";
+import Error from "./routes/error"
 
 const router = createBrowserRouter([
   {
@@ -31,7 +32,7 @@ const router = createBrowserRouter([
       },
       {
         path: '*',
-        element: <>error</>
+        element: <Error />
       }
     ],
   },
