@@ -10,8 +10,6 @@ export default function Collapse({ header, children }) {
     setStylediv(expanded ? {animation : "0.25s linear slideUp"} : {animation: "0.25s linear slideDown"});
   };
   
-  //let stylediv = expanded ? { animation: "0.25s linear slideDown" } : { animation: "0.25s linear slideUp" };
-  // let stylediv = expanded ? { tranform: "translateY(0)" } : { transform: "translateY(-100%)" };
   let arrowClass = `arrow ${expanded ? 'expanded' : ''}`;
   let contentsClass = `collapse-contents ${expanded ? 'expanded' : ''}`;
 

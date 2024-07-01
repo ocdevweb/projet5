@@ -28,7 +28,7 @@ export default function Carousel({ images, interval=5000 }) {
     <div className="carousel">
       { images.length > 1 && 
       <><Left onClick={prevSlide} className="prev"/>
-      <Right onClick={prevSlide} className="next"/></>}
+      <Right onClick={nextSlide} className="next"/></>}
       <img
         src={images[activeIndex]}
         alt={`Slide ${activeIndex}`}
