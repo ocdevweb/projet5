@@ -64,7 +64,11 @@
 }
 
 @media (max-width: 768px) {
-  .collapse-container {
+  .description .collapse-container {
+    width: 100%;
+  }
+
+  .about .collapse-container {
     width: 100%;
   }
 }
